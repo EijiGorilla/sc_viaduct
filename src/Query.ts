@@ -37,7 +37,7 @@ export async function dateUpdate() {
 }
 
 // Generate chart data
-export const types = [
+export const viatypes = [
   {
     category: 'Bored Pile',
     value: 1,
@@ -66,109 +66,109 @@ export const types = [
 
 export async function generateChartData(contractp: any) {
   var total_boredpile_incomp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 1 and Status1 = 1) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 1 and Status = 1) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_boredpile_incomp',
     statisticType: 'sum',
   });
 
   var total_boredpile_comp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 1 and Status1 = 4) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 1 and Status = 4) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_boredpile_comp',
     statisticType: 'sum',
   });
 
   var total_boredpile_delay = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 1 and Status1 = 3) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 1 and Status = 3) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_boredpile_delay',
     statisticType: 'sum',
   });
 
   var total_pilecap_incomp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 2 and Status1 = 1) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 2 and Status = 1) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pilecap_incomp',
     statisticType: 'sum',
   });
 
   var total_pilecap_comp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 2 and Status1 = 4) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 2 and Status = 4) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pilecap_comp',
     statisticType: 'sum',
   });
 
   var total_pilecap_delay = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 2 and Status1 = 3) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 2 and Status = 3) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pilecap_delay',
     statisticType: 'sum',
   });
 
   var total_pier_incomp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 3 and Status1 = 1) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 3 and Status = 1) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pier_incomp',
     statisticType: 'sum',
   });
 
   var total_pier_comp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 3 and Status1 = 4) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 3 and Status = 4) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pier_comp',
     statisticType: 'sum',
   });
 
   var total_pier_delay = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 3 and Status1 = 3) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 3 and Status = 3) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pier_delay',
     statisticType: 'sum',
   });
 
   var total_pierhead_incomp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 4 and Status1 = 1) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 4 and Status = 1) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pierhead_incomp',
     statisticType: 'sum',
   });
 
   var total_pierhead_comp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 4 and Status1 = 4) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 4 and Status = 4) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pierhead_comp',
     statisticType: 'sum',
   });
 
   var total_pierhead_delay = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 4 and Status1 = 3) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 4 and Status = 3) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_pierhead_delay',
     statisticType: 'sum',
   });
 
   var total_precast_incomp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 5 and Status1 = 1) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 5 and Status = 1) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_precast_incomp',
     statisticType: 'sum',
   });
 
   var total_precast_comp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 5 and Status1 = 4) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 5 and Status = 4) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_precast_comp',
     statisticType: 'sum',
   });
 
   var total_precast_delay = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 5 and Status1 = 3) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 5 and Status = 3) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_precast_delay',
     statisticType: 'sum',
   });
 
   var total_atgrade_incomp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 7 and Status1 = 1) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 7 and Status = 1) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_atgrade_incomp',
     statisticType: 'sum',
   });
 
   var total_atgrade_comp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 7 and Status1 = 4) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 7 and Status = 4) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_atgrade_comp',
     statisticType: 'sum',
   });
 
   var total_atgrade_delay = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN (Type = 7 and Status1 = 3) THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN (Type = 7 and Status = 3) THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_atgrade_delay',
     statisticType: 'sum',
   });
@@ -232,42 +232,42 @@ export async function generateChartData(contractp: any) {
 
     const data = [
       {
-        category: types[0].category,
+        category: viatypes[0].category,
         comp: pile_comp,
         incomp: pile_incomp,
         delay: pile_delay,
         icon: 'https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_Pile_Logo.svg',
       },
       {
-        category: types[1].category,
+        category: viatypes[1].category,
         comp: pilecap_comp,
         incomp: pilecap_incomp,
         delay: pilecap_delay,
         icon: 'https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_Pilecap_Logo.svg',
       },
       {
-        category: types[2].category,
+        category: viatypes[2].category,
         comp: pier_comp,
         incomp: pier_incomp,
         delay: pier_delay,
         icon: 'https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_Pier_Logo.svg',
       },
       {
-        category: types[3].category,
+        category: viatypes[3].category,
         comp: pierhead_comp,
         incomp: pierhead_incomp,
         delay: pierhead_delay,
         icon: 'https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_Pierhead_Logo.svg',
       },
       {
-        category: types[4].category,
+        category: viatypes[4].category,
         comp: precast_comp,
         incomp: precast_incomp,
         delay: precast_delay,
         icon: 'https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_Precast_Logo.svg',
       },
       {
-        category: types[5].category,
+        category: viatypes[5].category,
         comp: atgrade_comp,
         incomp: atgrade_incomp,
         delay: atgrade_delay,
@@ -286,7 +286,7 @@ export async function generateTotalProgress(contractp: any) {
   });
 
   var total_viaduct_comp = new StatisticDefinition({
-    onStatisticField: 'CASE WHEN Status1 = 4 THEN 1 ELSE 0 END',
+    onStatisticField: 'CASE WHEN Status = 4 THEN 1 ELSE 0 END',
     outStatisticFieldName: 'total_viaduct_comp',
     statisticType: 'sum',
   });
@@ -354,10 +354,10 @@ export async function timeSeriesChartData(contractp: any) {
 
   if (!contractp) {
     // eslint-disable-next-line no-useless-concat
-    query.where = 'end_date IS NOT NULL' + ' AND ' + "CP = 'S-01'";
+    query.where = 'finish_actual IS NOT NULL' + ' AND ' + "CP = 'S-01'";
   } else {
     // eslint-disable-next-line no-useless-concat
-    query.where = 'end_date IS NOT NULL' + ' AND ' + "CP = '" + contractp + "'";
+    query.where = 'finish_actual IS NOT NULL' + ' AND ' + "CP = '" + contractp + "'";
   }
 
   query.outStatistics = [
@@ -368,9 +368,9 @@ export async function timeSeriesChartData(contractp: any) {
     total_complete_precast,
     total_complete_atgrade,
   ];
-  query.outFields = ['end_date', 'CP'];
-  query.orderByFields = ['end_date'];
-  query.groupByFieldsForStatistics = ['end_date'];
+  query.outFields = ['finish_actual', 'CP'];
+  query.orderByFields = ['finish_actual'];
+  query.groupByFieldsForStatistics = ['finish_actual'];
 
   return viaductLayerStatus4.queryFeatures(query).then((response: any) => {
     var stats = response.features;
@@ -378,7 +378,7 @@ export async function timeSeriesChartData(contractp: any) {
     // collect all dates for each viaduct type
     const data = stats.map((result: any, index: any) => {
       const attributes = result.attributes;
-      const date = attributes.end_date;
+      const date = attributes.finish_actual;
 
       const pileCount = attributes.total_complete_pile;
       const pilecapCount = attributes.total_complete_pilecap;

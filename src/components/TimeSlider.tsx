@@ -6,7 +6,7 @@ const TimeSlider = (props: any) => {
   timeSlider.watch('timeExtent', (timeExtent: any) => {
     // Query and Filter
     const dateFilterExpression =
-      "TargetDate <= date'" +
+      "finish_plan <= date'" +
       timeExtent.end.getFullYear() +
       '-' +
       (timeExtent.end.getMonth() + 1) +

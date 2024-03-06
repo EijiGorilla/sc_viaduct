@@ -68,7 +68,7 @@ export const chainageLayer = new FeatureLayer({
   minScale: 150000,
   maxScale: 0,
   renderer: chainageRenderer,
-  outFields: ['*'],
+  // outFields: ['*'],
   popupEnabled: false,
 });
 
@@ -192,7 +192,7 @@ export const pierNoLayer = new FeatureLayer({
     mode: 'on-the-ground', //absolute-height, relative-to-ground
   },
   title: 'Pier No',
-  outFields: ['*'],
+  // outFields: ['*'],
   popupEnabled: false,
 });
 
@@ -242,7 +242,6 @@ export const viaductLayer = new SceneLayer({
   },
   title: 'Viaduct',
   labelsVisible: false,
-  outFields: ['*'],
   popupTemplate: {
     title: '<p>{PierNumber}</p>',
     lastEditInfoEnabled: false,
@@ -259,8 +258,9 @@ export const viaductLayer = new SceneLayer({
             fieldName: 'CP',
           },
           {
-            fieldName: 'planned_date',
-            label: 'Target Date',
+            // this gives error.. WHY?
+            fieldName: 'start_actual',
+            label: 'Construction started',
           },
           {
             fieldName: 'uniqueID',
@@ -280,5 +280,5 @@ export const viaductLayerStatus4 = new SceneLayer({
       url: 'https://gis.railway-sector.com/portal',
     },
   },
-  definitionExpression: 'Status1 = 4',
+  definitionExpression: 'Status = 4',
 });

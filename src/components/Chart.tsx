@@ -15,7 +15,7 @@ import {
   zoomToLayer,
 } from '../Query';
 
-import { types } from '../Query';
+import { viatypes } from '../Query';
 
 // Dispose function
 function maybeDisposeRoot(divId: any) {
@@ -257,7 +257,7 @@ const Chart = (props: any) => {
       series.columns.template.events.on('click', (ev) => {
         const selected: any = ev.target.dataItem?.dataContext;
         const categorySelect: string = selected.category;
-        const find = types.find((emp: any) => emp.category === categorySelect);
+        const find = viatypes.find((emp: any) => emp.category === categorySelect);
         const typeSelect = find?.value;
         const selectedStatus: number | null =
           fieldName === 'comp' ? (fieldName === 'incomp' ? 1 : 4) : fieldName === 'delay' ? 3 : 1;
@@ -270,12 +270,12 @@ const Chart = (props: any) => {
           'Type = ' +
           typeSelect +
           ' AND ' +
-          'Status1 = ' +
+          'Status = ' +
           selectedStatus;
 
         // Define Query
         var query = viaductLayer.createQuery();
-        // query.where = '1=1';
+        query.where = expression;
 
         // layerView filter and highlight
         let highlightSelect: any;
