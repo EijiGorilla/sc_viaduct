@@ -35,6 +35,7 @@ const Chart = (props: any) => {
 
   const chartID = 'viaduct-bar';
 
+  console.log(props.contractp);
   useEffect(() => {
     generateChartData(props.contractp).then((response: any) => {
       setChartData(response);
@@ -275,37 +276,34 @@ const Chart = (props: any) => {
 
         // Define Query
         var query = viaductLayer.createQuery();
-        query.where = expression;
 
         // layerView filter and highlight
         let highlightSelect: any;
-        view.when(() => {
-          view.whenLayerView(viaductLayer).then((layerView: any) => {
-            viaductLayer.queryFeatures(query).then((results: any) => {
-              const lengths = results.features;
-              const rows = lengths.length;
+        view.whenLayerView(viaductLayer).then((layerView: any) => {
+          viaductLayer.queryFeatures(query).then((results: any) => {
+            const lengths = results.features;
+            const rows = lengths.length;
 
-              let objID = [];
-              for (var i = 0; i < rows; i++) {
-                var obj = results.features[i].attributes.OBJECTID;
-                objID.push(obj);
-              }
+            let objID = [];
+            for (var i = 0; i < rows; i++) {
+              var obj = results.features[i].attributes.OBJECTID;
+              objID.push(obj);
+            }
 
-              if (highlightSelect) {
-                highlightSelect.remove();
-              }
-              highlightSelect = layerView.highlight(objID);
+            if (highlightSelect) {
+              highlightSelect.remove();
+            }
+            highlightSelect = layerView.highlight(objID);
 
-              view.on('click', () => {
-                layerView.filter = new FeatureFilter({
-                  where: undefined,
-                });
-                highlightSelect.remove();
+            view.on('click', () => {
+              layerView.filter = new FeatureFilter({
+                where: undefined,
               });
+              highlightSelect.remove();
             });
-            layerView.filter = new FeatureFilter({
-              where: expression,
-            });
+          });
+          layerView.filter = new FeatureFilter({
+            where: expression,
           });
         });
       });

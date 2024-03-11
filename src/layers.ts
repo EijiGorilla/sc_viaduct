@@ -68,7 +68,7 @@ export const chainageLayer = new FeatureLayer({
   minScale: 150000,
   maxScale: 0,
   renderer: chainageRenderer,
-  // outFields: ['*'],
+  //
   popupEnabled: false,
 });
 
@@ -192,7 +192,7 @@ export const pierNoLayer = new FeatureLayer({
     mode: 'on-the-ground', //absolute-height, relative-to-ground
   },
   title: 'Pier No',
-  // outFields: ['*'],
+  //
   popupEnabled: false,
 });
 
@@ -206,7 +206,7 @@ const colorViaduct = [
 
 function renderViaductLayer() {
   const renderer = new UniqueValueRenderer({
-    field: 'Status1',
+    field: 'Status',
   });
 
   for (var i = 0; i < colorViaduct.length; i++) {
@@ -232,7 +232,7 @@ function renderViaductLayer() {
 
 export const viaductLayer = new SceneLayer({
   portalItem: {
-    id: '9075fcc18cdc4a17bddc9d021a2eff1f',
+    id: 'bd316f3882de4599897a9f8c59288dfa',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
@@ -275,7 +275,7 @@ renderViaductLayer();
 
 export const viaductLayerStatus4 = new SceneLayer({
   portalItem: {
-    id: '9075fcc18cdc4a17bddc9d021a2eff1f',
+    id: 'bd316f3882de4599897a9f8c59288dfa',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
