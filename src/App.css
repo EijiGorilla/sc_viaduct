@@ -16,7 +16,14 @@ br {
   font-size: 24%;
 }
 
-calcite-tab,
+calcite-label {
+  --calcite-ui-text-1: #ffffff;
+  --calcite-font-size--1: 1.1rem;
+  /* margin-top: 1vh; */
+  margin-left: 15px;
+  margin-top: 5%;
+}
+
 calcite-tabs {
   --calcite-ui-border-3: #555555;
   --calcite-ui-border-2: #555555;
@@ -147,53 +154,20 @@ calcite-segmented-control {
 }
 
 /* total Progress */
-
-.totalProgressDiv {
-  display: flex;
-  padding-left: 20px;
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
-.totalProgressLabel {
-  color: white;
-  font-size: 1.5vw;
-  padding-bottom: 0.3vh;
-  padding-top: 0.6vh;
-}
-
 .totalProgressNumber {
   color: #6ede00;
-  font-size: 3.3vw;
+  font-size: 3rem;
   font-weight: bold;
   font-family: 'calibri';
-  margin-left: 10px;
+  margin-left: 4%;
 }
 
 .totalProgressNumber2 {
   color: white;
-  font-size: 1vw;
+  font-size: 1rem;
   font-weight: normal;
-  padding-top: 0.5vh;
-  margin-left: 10px;
-}
-
-#utilityNumberDiv {
-  width: 50%;
-  height: 10%;
-  padding-top: 2%;
-  padding-left: 15px;
-  font-size: 1vw;
-  color: #f7f5f7;
-}
-
-#utilityNumberDiv b {
-  font-size: 2.5vw;
-  font-family: 'Calibri';
-  font-weight: bold;
-  color: #6ede00;
-  /*#d4ff33;*/
-  margin: auto;
+  margin-top: 6%;
+  margin-left: 4%;
 }
 
 /* Information panel */

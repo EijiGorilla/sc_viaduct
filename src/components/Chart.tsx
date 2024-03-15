@@ -6,7 +6,7 @@ import * as am5 from '@amcharts/amcharts5';
 import * as am5xy from '@amcharts/amcharts5/xy';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 import am5themes_Responsive from '@amcharts/amcharts5/themes/Responsive';
-
+import { CalciteLabel } from '@esri/calcite-components-react';
 import '../App.css';
 import {
   generateChartData,
@@ -321,29 +321,26 @@ const Chart = (props: any) => {
 
   return (
     <div>
-      <div className="totalProgressDiv">
-        <div>
-          <div className="totalProgressLabel">TOTAL PROGRESS</div>
-          <br />
-          <br />
-          <b className="totalProgressNumber">
-            {thousands_separators(progress[2])} %{' '}
-            <div className="totalProgressNumber2">({thousands_separators(progress[0])})</div>
-          </b>
-        </div>
-        <img
-          src="https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_All_Logo.svg"
-          alt="Utility Logo"
-          height={'17%'}
-          width={'17%'}
-          style={{ padding: '10px', margin: 'auto' }}
-        />
-      </div>
+      <CalciteLabel>TOTAL PROGRESS</CalciteLabel>
+      <CalciteLabel layout="inline">
+        <b className="totalProgressNumber">
+          {thousands_separators(progress[2])} %
+          <img
+            src="https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_All_Logo.svg"
+            alt="Utility Logo"
+            height={'15%'}
+            width={'15%'}
+            style={{ marginLeft: '75%', display: 'flex', marginTop: '-15%' }}
+          />
+          <div className="totalProgressNumber2">({thousands_separators(progress[0])})</div>
+        </b>
+      </CalciteLabel>
+
       <div
         id={chartID}
         style={{
           width: '22vw',
-          height: '55vh',
+          height: '60vh',
           backgroundColor: 'rgb(0,0,0,0)',
           color: 'white',
           marginRight: '10px',
