@@ -110,12 +110,23 @@ function App() {
         <CalciteTabs slot="panel-end" style={{ width: '25vw' }}>
           <Chart contractp={!cpValueSelected ? '' : cpValueSelected} />
         </CalciteTabs>
-        <header slot="header" id="headerDiv">
+        <header
+          slot="header"
+          id="headerDiv"
+          style={{
+            display: 'flex',
+            width: '100%',
+            height: '7.5vh',
+            padding: '0 1rem',
+            borderStyle: 'solid',
+            borderWidth: 1,
+          }}
+        >
           <img
             src="https://EijiGorilla.github.io/Symbols/Projec_Logo/DOTr_Logo_v2.png"
             alt="DOTr Logo"
-            height={'2.9%'}
-            width={'2.9%'}
+            height={'55px'}
+            width={'55px'}
             style={{ marginBottom: 'auto', marginTop: 'auto' }}
           />
           <b className="headerTitle">SC VIADUCT</b>
@@ -142,8 +153,8 @@ function App() {
           <img
             src="https://EijiGorilla.github.io/Symbols/Projec_Logo/GCR LOGO.png"
             alt="GCR Logo"
-            height={'4.4%'}
-            width={'4.4%'}
+            height={'50px'}
+            width={'60px'}
             style={{
               marginBottom: 'auto',
               marginTop: 'auto',
