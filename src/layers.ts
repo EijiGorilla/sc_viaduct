@@ -232,7 +232,7 @@ function renderViaductLayer() {
 
 export const viaductLayer = new SceneLayer({
   portalItem: {
-    id: '29546c52d3cf4bbc90dcdada53fc8c95',
+    id: '1f89733a04b443e2a1e0e5e6dfd493e3',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
@@ -275,7 +275,7 @@ renderViaductLayer();
 
 export const viaductLayerStatus4 = new SceneLayer({
   portalItem: {
-    id: 'bd316f3882de4599897a9f8c59288dfa',
+    id: '1f89733a04b443e2a1e0e5e6dfd493e3',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
