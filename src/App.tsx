@@ -116,7 +116,7 @@ function App() {
           style={{
             display: 'flex',
             width: '100%',
-            height: '7.5vh',
+            height: '70px',
             padding: '0 1rem',
             borderStyle: 'solid',
             borderWidth: 1,
@@ -132,6 +132,8 @@ function App() {
           <b className="headerTitle">SC VIADUCT</b>
           <div className="date">{!asOfDate ? '' : 'As of ' + asOfDate}</div>
           <CalciteSegmentedControl
+            style={{ height: '50px', marginTop: 'auto', marginBottom: 'auto' }}
+            scale="m"
             onCalciteSegmentedControlChange={(event: any) =>
               setCpValueSelected(event.target.selectedItem.id)
             }
