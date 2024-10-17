@@ -319,22 +319,55 @@ const Chart = (props: any) => {
     };
   });
 
+  const primaryLabelColor = '#9ca3af';
+  const valueLabelColor = '#d1d5db';
+
   return (
     <div>
-      <CalciteLabel>TOTAL PROGRESS</CalciteLabel>
+      <div
+        style={{
+          color: primaryLabelColor,
+          fontSize: '1.3rem',
+          marginLeft: '13px',
+          marginTop: '10px',
+          marginBottom: '-5px',
+        }}
+      >
+        Total Progress
+      </div>
       <CalciteLabel layout="inline">
-        <b className="totalProgressNumber">
-          {thousands_separators(progress[2])} %
-          <img
-            src="https://EijiGorilla.github.io/Symbols/Viaduct_Images/Viaduct_All_Logo.svg"
-            alt="Utility Logo"
-            height={'15%'}
-            width={'15%'}
-            style={{ marginLeft: '75%', display: 'flex', marginTop: '-15%' }}
-          />
-          <div className="totalProgressNumber2">({thousands_separators(progress[0])})</div>
-        </b>
+        <div
+          style={{
+            color: valueLabelColor,
+            fontSize: '2.7rem',
+            fontWeight: 'bold',
+            fontFamily: 'calibri',
+            lineHeight: '1.2',
+            marginLeft: '30px',
+          }}
+        >
+          {progress[2]} %
+        </div>
+
+        <img
+          src="https://EijiGorilla.github.io/Symbols/Station_Structures_icon.png"
+          alt="Utility Logo"
+          height={'55px'}
+          width={'55px'}
+          style={{ marginLeft: '75%', display: 'flex', marginTop: '-40px' }}
+        />
       </CalciteLabel>
+      <div
+        style={{
+          color: valueLabelColor,
+          fontSize: '1rem',
+          fontFamily: 'calibri',
+          lineHeight: '1.2',
+          marginLeft: '30px',
+        }}
+      >
+        ({thousands_separators(progress[0])})
+      </div>
 
       <div
         id={chartID}
