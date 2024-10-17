@@ -4,11 +4,14 @@ import { map, view, basemaps, layerList, timeSlider, start } from './Scene';
 import './index.css';
 import './App.css';
 import '@esri/calcite-components/dist/components/calcite-shell';
-import '@esri/calcite-components/dist/components/calcite-list';
-import '@esri/calcite-components/dist/components/calcite-list-item';
 import '@esri/calcite-components/dist/components/calcite-shell-panel';
 import '@esri/calcite-components/dist/components/calcite-action';
 import '@esri/calcite-components/dist/components/calcite-action-bar';
+import '@esri/calcite-components/dist/components/calcite-switch';
+import '@esri/calcite-components/dist/components/calcite-panel';
+import '@esri/calcite-components/dist/components/calcite-shell-panel';
+import '@esri/calcite-components/dist/components/calcite-segmented-control';
+import '@esri/calcite-components/dist/components/calcite-segmented-control-item';
 import '@esri/calcite-components/dist/calcite/calcite.css';
 import {
   CalciteShell,
@@ -18,8 +21,6 @@ import {
   CalciteSwitch,
   CalciteTabs,
   CalcitePanel,
-  CalciteList,
-  CalciteListItem,
   CalciteSegmentedControl,
   CalciteSegmentedControlItem,
 } from '@esri/calcite-components-react';
@@ -142,7 +143,7 @@ function App() {
           <b className="headerTitle">SC VIADUCT</b>
           <div className="date">{!asOfDate ? '' : 'As of ' + asOfDate}</div>
           <CalciteSegmentedControl
-            style={{ height: '50px', marginTop: 'auto', marginBottom: 'auto' }}
+            style={{ height: '50px', marginTop: '20px', marginBottom: 'auto' }}
             scale="m"
             onCalciteSegmentedControlChange={(event: any) =>
               setCpValueSelected(event.target.selectedItem.id)
