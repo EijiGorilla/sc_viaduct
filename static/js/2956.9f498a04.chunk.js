@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksc_viaduct=self.webpackChunksc_viaduct||[]).push([[2956],{22956:(e,t,n)=>{n.d(t,{projectMeshVertexPositions:()=>a});var s=n(45308),i=n(14894),o=n(80963),r=n(53848);function a(e,t){const n=(0,r.UR)(e,i.A.absolute);if(!n)return null;let a=n.position;return(0,o.aI)(e.spatialReference,t)||(a=new Float64Array(n.position.length),(0,s.projectBuffer)(n.position,e.spatialReference,0,a,t,0))?a:null}}}]);
+//# sourceMappingURL=2956.9f498a04.chunk.js.map
