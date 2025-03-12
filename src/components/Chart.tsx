@@ -290,16 +290,16 @@ const Chart = (props: any) => {
               objID.push(obj);
             }
 
-            if (highlightSelect) {
-              highlightSelect.remove();
-            }
-            highlightSelect = layerView.highlight(objID);
+            // if (highlightSelect) {
+            //   highlightSelect.remove();
+            // }
+            // highlightSelect = layerView.highlight(objID);
 
             view.on('click', () => {
               layerView.filter = new FeatureFilter({
                 where: undefined,
               });
-              highlightSelect.remove();
+              // highlightSelect.remove();
             });
           });
           layerView.filter = new FeatureFilter({
@@ -311,7 +311,7 @@ const Chart = (props: any) => {
     }
     makeSeries('Complete', 'comp');
     makeSeries('Incomplete', 'incomp');
-    makeSeries('Delayed', 'delay');
+    // makeSeries('Delayed', 'delay');
     chart.appear(1000, 100);
 
     return () => {
